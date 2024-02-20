@@ -1,5 +1,6 @@
 import ActiveStep from "../../components/ActiveStep/ActiveStep";
 import BarSteps from "../../components/BarSteps/BarSteps";
+import Button from "../../components/Button/Button";
 import FormWrapper from "../../components/FormWrapper/FormWrapper";
 import InactiveStep from "../../components/InactiveStep/InactiveStep";
 import OutputStepsPanel from "../../components/OutputStepsPanel/OutputStepsPanel";
@@ -28,7 +29,19 @@ const StepOne = () => {
         <span className={styles.steptitle}>STEP 4</span>
       </BarSteps>
       <OutputStepsPanel>
-        <div>fergergerger</div>
+        <h1>Personal Info</h1>
+        <h3>Please, provide your name, email adress and phone number</h3>
+        <p>Name:</p>
+        <input className={styles.input} placeholder="Your name"></input>
+        <p>Email Addres:</p>
+        <input type="email" className={styles.input} placeholder="Your Email" required/>
+        <p>Phone Number:</p>
+        <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required  className={styles.input} placeholder="Your Phone"></input>
+        <div className={styles.block}>
+        <Link to="/steptwo">
+          <Button>Next Step</Button>
+        </Link>
+        </div>
       </OutputStepsPanel>
     </FormWrapper>
   );
