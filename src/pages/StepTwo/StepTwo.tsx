@@ -3,19 +3,19 @@ import BarSteps from "../../components/BarSteps/BarSteps";
 import FormWrapper from "../../components/FormWrapper/FormWrapper";
 import InactiveStep from "../../components/InactiveStep/InactiveStep";
 import OutputStepsPanel from "../../components/OutputStepsPanel/OutputStepsPanel";
-import styles from "./StepOne.module.css";
+import styles from "./StepTwo.module.css";
 import { Link } from "react-router-dom";
 
-const StepOne = () => {
+const StepTwo = () => {
   return (
     <FormWrapper>
       <BarSteps>
         <Link to="/stepone">
-          <ActiveStep>1</ActiveStep>
+          <InactiveStep>1</InactiveStep>
         </Link>
         <span className={styles.steptitle}>STEP 1</span>
         <Link to="/steptwo">
-          <InactiveStep>2</InactiveStep>
+          <ActiveStep>2</ActiveStep>
         </Link>
         <span className={styles.steptitle}>STEP 2</span>
         <Link to="/stepthree">
@@ -34,4 +34,4 @@ const StepOne = () => {
   );
 };
 
-export default StepOne;
+export default StepTwo;
