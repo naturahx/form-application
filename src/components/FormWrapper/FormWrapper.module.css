@@ -6,10 +6,11 @@
 }
 
 .form {
-  width: 300px; /* Ширина формы */
-  padding: 20px;
+  width: 1000px; /* Ширина формы */
+  height: 630px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

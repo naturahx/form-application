@@ -1,0 +1,12 @@
+.activestep {
+  display: inline-block;
+  background-color: #825ce9;
+  color: white;
+  padding: 20px 25px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #825ce9;
+  margin-left: 40px;
+  margin-top: 35px;
+}
