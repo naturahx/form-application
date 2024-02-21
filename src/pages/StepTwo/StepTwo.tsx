@@ -57,7 +57,7 @@ const StepTwo = () => {
             }}
             onClick={() => {
               handleClick(1);
-              setSelectedDiv("Arcade");
+              setSelectedDiv("Arcade $9/month");
             }}
           >
             Arcade <div className={styles.month}>9/mo</div>
@@ -69,7 +69,7 @@ const StepTwo = () => {
             }}
             onClick={() => {
               handleClick(2);
-              setSelectedDiv("Advanced");
+              setSelectedDiv("Advanced $12/month");
             }}
           >
             Advanced <div className={styles.month}>12/mo</div>
@@ -81,7 +81,7 @@ const StepTwo = () => {
             }}
             onClick={() => {
               handleClick(3);
-              setSelectedDiv("Pro");
+              setSelectedDiv("Pro $15/month");
             }}
           >
             Pro <div className={styles.month}>15/mo</div>
