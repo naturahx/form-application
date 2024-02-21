@@ -6,8 +6,16 @@ import InactiveStep from "../../components/InactiveStep/InactiveStep";
 import OutputStepsPanel from "../../components/OutputStepsPanel/OutputStepsPanel";
 import styles from "./StepFour.module.css";
 import { Link } from "react-router-dom";
+// import React, { FC } from "react";
+
+// interface StepFourProps {
+//   selectedDiv?: string
+// }
 
 const StepFour = () => {
+
+  const dataPassed = localStorage.getItem('dataToPass');
+
   return (
     <FormWrapper>
       <BarSteps>
@@ -32,7 +40,7 @@ const StepFour = () => {
         <h1>Finishing up</h1>
         <h3>Click OK else all it's OK</h3>
         <form className={styles.formblock}>
-          <h3>Arcade   |   $9/mo</h3>
+          <h3>{dataPassed}   |   $9/mo</h3>
           <h4>+1$</h4>
           <h2 className={styles.total}>Total: 12$</h2>
         </form>

@@ -7,13 +7,24 @@ import OutputStepsPanel from "../../components/OutputStepsPanel/OutputStepsPanel
 import styles from "./StepTwo.module.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import StepFour from "../StepFour/StepFour";
 
 const StepTwo = () => {
   const [activeDiv, setActiveDiv] = useState(null);
+  const [selectedDiv, setSelectedDiv] = useState<string>('');
+
 
   const handleClick = (index: any) => {
     setActiveDiv(index);
   };
+
+  const setSelected = (divValue: string) => {
+    setSelectedDiv(divValue);
+  }  
+
+  const dataToPass = selectedDiv;
+
+  localStorage.setItem('dataToPass', dataToPass);
 
   return (
     <FormWrapper>
@@ -44,7 +55,10 @@ const StepTwo = () => {
             style={{
               background: activeDiv === 1 ? "#3333" : "white",
             }}
-            onClick={() => handleClick(1)}
+            onClick={() => {
+              handleClick(1);
+              setSelectedDiv("Arcade");
+            }}
           >
             Arcade <div className={styles.month}>9/mo</div>
           </div>
@@ -53,7 +67,10 @@ const StepTwo = () => {
             style={{
               background: activeDiv === 2 ? "#3333" : "white",
             }}
-            onClick={() => handleClick(2)}
+            onClick={() => {
+              handleClick(2);
+              setSelectedDiv("Advanced");
+            }}
           >
             Advanced <div className={styles.month}>12/mo</div>
           </div>
@@ -62,7 +79,10 @@ const StepTwo = () => {
             style={{
               background: activeDiv === 3 ? "#3333" : "white",
             }}
-            onClick={() => handleClick(3)}
+            onClick={() => {
+              handleClick(3);
+              setSelectedDiv("Pro");
+            }}
           >
             Pro <div className={styles.month}>15/mo</div>
           </div>
@@ -71,6 +91,7 @@ const StepTwo = () => {
           <Link to="/stepthree">
             <Button>Next Step</Button>
           </Link>
+          
         </div>
       </OutputStepsPanel>
     </FormWrapper>
