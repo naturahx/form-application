@@ -10,6 +10,7 @@ import StepOne from './pages/StepOne/StepOne.tsx';
 import StepTwo from './pages/StepTwo/StepTwo.tsx';
 import StepThree from './pages/StepThree/StepThree.tsx';
 import StepFour from './pages/StepFour/StepFour.tsx';
+import ThankYou from './pages/ThankYou/ThankYou.tsx';
 
 
 const router = createBrowserRouter([
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "/stepfour",
     element: <StepFour />,
+  },
+  {
+    path: "/thank",
+    element: <ThankYou />,
   },
 ]);
 

@@ -4,3 +4,23 @@
   font-size: 15px;
   font-weight: 800;
 }
+
+.block {
+  margin-top: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.formblock {
+  border: 3px solid #333;
+  border-radius: 15px;
+  height: 300px;
+  text-align: center;
+  width: 39vw;
+  color: #5b1981;
+}
+
+.total {
+  margin-top: 130px;
+  color: #881ec5;
+}

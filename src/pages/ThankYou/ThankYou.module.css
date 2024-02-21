@@ -1,0 +1,13 @@
+.steptitle {
+  color: white;
+  margin: 0px 10px;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin-top: 50px;
+}

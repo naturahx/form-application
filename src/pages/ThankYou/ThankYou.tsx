@@ -4,10 +4,10 @@ import Button from "../../components/Button/Button";
 import FormWrapper from "../../components/FormWrapper/FormWrapper";
 import InactiveStep from "../../components/InactiveStep/InactiveStep";
 import OutputStepsPanel from "../../components/OutputStepsPanel/OutputStepsPanel";
-import styles from "./StepThree.module.css";
+import styles from "./ThankYou.module.css";
 import { Link } from "react-router-dom";
 
-const StepThree = () => {
+const ThankYou = () => {
   return (
     <FormWrapper>
       <BarSteps>
@@ -20,36 +20,20 @@ const StepThree = () => {
         </Link>
         <span className={styles.steptitle}>STEP 2</span>
         <Link to="/stepthree">
-          <ActiveStep>3</ActiveStep>
+          <InactiveStep>3</InactiveStep>
         </Link>
         <span className={styles.steptitle}>STEP 3</span>
         <Link to="/stepfour">
-          <InactiveStep>4</InactiveStep>
+          <ActiveStep>4</ActiveStep>
         </Link>
         <span className={styles.steptitle}>STEP 4</span>
       </BarSteps>
       <OutputStepsPanel>
-        <h1>Pick add-ons</h1>
-        <h3>Add-ons help your gaming experience.</h3>
-        <div>
-      <div className={styles.checkboxContainer}>
-        <input type="checkbox" id="checkbox1" className={styles.customCheckbox} />
-        <label htmlFor="checkbox1">+1 $  Onlise Service</label>
-      </div>
-  
-      <div className={styles.checkboxContainer}>
-        <input type="checkbox" id="checkbox2" className={styles.customCheckbox} />
-        <label htmlFor="checkbox2">+2 $  Storage 1TB</label>
-      </div>
-  
-      <div className={styles.checkboxContainer}>
-        <input type="checkbox" id="checkbox3" className={styles.customCheckbox} />
-        <label htmlFor="checkbox3">+2 $  Custom Profile</label>
-      </div>
-    </div>
+        <h1>Thank You</h1>
+        <h3>Checked your Email !</h3>
         <div className={styles.block}>
-          <Link to="/stepfour">
-            <Button>Next Step</Button>
+          <Link to="/stepone">
+            <Button>Go to STEP 1</Button>
           </Link>
         </div>
       </OutputStepsPanel>
@@ -57,4 +41,5 @@ const StepThree = () => {
   );
 };
 
-export default StepThree;
+
+export default ThankYou
