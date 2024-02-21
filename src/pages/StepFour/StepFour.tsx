@@ -41,7 +41,6 @@ const StepFour = () => {
         <h3>Click OK else all it's OK</h3>
         <form className={styles.formblock}>
           <h2>{dataPassed}</h2>
-          <h3>+1 $</h3>
           <h3>+2 $</h3>
           <h2 className={styles.total}>Total: 12$</h2>
         </form>
