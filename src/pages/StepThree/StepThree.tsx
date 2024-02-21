@@ -1,5 +1,6 @@
 import ActiveStep from "../../components/ActiveStep/ActiveStep";
 import BarSteps from "../../components/BarSteps/BarSteps";
+import Button from "../../components/Button/Button";
 import FormWrapper from "../../components/FormWrapper/FormWrapper";
 import InactiveStep from "../../components/InactiveStep/InactiveStep";
 import OutputStepsPanel from "../../components/OutputStepsPanel/OutputStepsPanel";
@@ -28,7 +29,13 @@ const StepThree = () => {
         <span className={styles.steptitle}>STEP 4</span>
       </BarSteps>
       <OutputStepsPanel>
-        <div>fergergerger</div>
+        <h1>Pick add-ons</h1>
+        <h3>Add-ons help your gaming experience.</h3>
+        <div className={styles.block}>
+          <Link to="/stepfour">
+            <Button>Next Step</Button>
+          </Link>
+        </div>
       </OutputStepsPanel>
     </FormWrapper>
   );

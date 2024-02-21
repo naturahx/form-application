@@ -6,15 +6,14 @@ import InactiveStep from "../../components/InactiveStep/InactiveStep";
 import OutputStepsPanel from "../../components/OutputStepsPanel/OutputStepsPanel";
 import styles from "./StepTwo.module.css";
 import { Link } from "react-router-dom";
-import { useState } from 'react'
+import { useState } from "react";
 
 const StepTwo = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [activeDiv, setActiveDiv] = useState(null);
 
-  const handleSelectOption = (option: any, e: any) => {
-    e.preventDefault();
-    setSelectedOption(option);
-};
+  const handleClick = (index: any) => {
+    setActiveDiv(index);
+  };
 
   return (
     <FormWrapper>
@@ -39,25 +38,34 @@ const StepTwo = () => {
       <OutputStepsPanel>
         <h1>Select your plan</h1>
         <h3>Select option arcade / advanced / pro</h3>
-        <div>
-            <button
-                className={selectedOption === 'option1' ? 'selected' : ''}
-                onClick={(e) => handleSelectOption('option1', e)}
-            >
-                Option 1
-            </button>
-            <button
-                className={selectedOption === 'option2' ? 'selected' : ''}
-                onClick={(e) => handleSelectOption('option2', e)}
-            >
-                Option 2
-            </button>
-            <button
-                className={selectedOption === 'option3' ? 'selected' : ''}
-                onClick={(e) => handleSelectOption('option3', e)}
-            >
-                Option 3
-            </button>
+        <div className={styles.display}>
+          <div
+            className={styles.radio}
+            style={{
+              background: activeDiv === 1 ? "#3333" : "white",
+            }}
+            onClick={() => handleClick(1)}
+          >
+            Arcade <div className={styles.month}>9/mo</div>
+          </div>
+          <div
+            className={styles.radio}
+            style={{
+              background: activeDiv === 2 ? "#3333" : "white",
+            }}
+            onClick={() => handleClick(2)}
+          >
+            Advanced <div className={styles.month}>12/mo</div>
+          </div>
+          <div
+            className={styles.radio}
+            style={{
+              background: activeDiv === 3 ? "#3333" : "white",
+            }}
+            onClick={() => handleClick(3)}
+          >
+            Pro <div className={styles.month}>15/mo</div>
+          </div>
         </div>
         <div className={styles.block}>
           <Link to="/stepthree">

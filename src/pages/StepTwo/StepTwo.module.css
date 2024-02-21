@@ -11,14 +11,21 @@
   justify-content: flex-end;
 }
 
-button {
-  background-color: #f0f0f0;
-  color: #333;
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  margin-right: 10px;
+.radio {
+  border: 1px solid #333;
+  border-radius: 20px;
+  width: 170px;
+  height: 200px;
+  margin: 20px 15px;
+  text-align: center;
+  font-weight: 800;
 }
-button.selected {
-  background-color: lightgrey;
+
+.display {
+  display: flex;
+}
+
+.month {
+  margin: 130px 0;
+  font-weight: 800;
 }
