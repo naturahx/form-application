@@ -6,15 +6,12 @@ import InactiveStep from "../../components/InactiveStep/InactiveStep";
 import OutputStepsPanel from "../../components/OutputStepsPanel/OutputStepsPanel";
 import styles from "./StepFour.module.css";
 import { Link } from "react-router-dom";
-// import React, { FC } from "react";
 
-// interface StepFourProps {
-//   selectedDiv?: string
-// }
 
 const StepFour = () => {
 
   const dataPassed = localStorage.getItem('dataToPass');
+  const dataAdd = localStorage.getItem('dataToAdd');
 
   return (
     <FormWrapper>
@@ -41,7 +38,7 @@ const StepFour = () => {
         <h3>Click OK else all it's OK</h3>
         <form className={styles.formblock}>
           <h2>{dataPassed}</h2>
-          <h3>+2 $</h3>
+          <h3>{dataAdd}</h3>
           <h2 className={styles.total}>Total: 12$</h2>
         </form>
         <div className={styles.block}>

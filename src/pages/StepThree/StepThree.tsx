@@ -6,8 +6,20 @@ import InactiveStep from "../../components/InactiveStep/InactiveStep";
 import OutputStepsPanel from "../../components/OutputStepsPanel/OutputStepsPanel";
 import styles from "./StepThree.module.css";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const StepThree = () => {
+  const [add, setAdd] = useState<string[]>([]);
+
+  const setAddNew = (addValue: string) => {
+    setAdd(prevAdd => [...prevAdd, addValue]);
+  }
+  
+  const dataToAdd = add;
+  
+  useEffect(() => {
+    localStorage.setItem('dataToAdd', JSON.stringify(dataToAdd));
+  }, [dataToAdd]);
   return (
     <FormWrapper>
       <BarSteps>
@@ -33,17 +45,16 @@ const StepThree = () => {
         <h3>Add-ons help your gaming experience.</h3>
         <div>
       <div className={styles.checkboxContainer}>
-        <input type="checkbox" id="checkbox1" className={styles.customCheckbox} />
+        <input onClick={() => setAddNew('+1 $')} type="checkbox" id="checkbox1" className={styles.customCheckbox} />
         <label htmlFor="checkbox1">+1 $  Onlise Service</label>
       </div>
-  
       <div className={styles.checkboxContainer}>
-        <input type="checkbox" id="checkbox2" className={styles.customCheckbox} />
+        <input onClick={() => setAddNew('+2 $')} type="checkbox" id="checkbox2" className={styles.customCheckbox} />
         <label htmlFor="checkbox2">+2 $  Storage 1TB</label>
       </div>
   
       <div className={styles.checkboxContainer}>
-        <input type="checkbox" id="checkbox3" className={styles.customCheckbox} />
+        <input onClick={() => setAddNew('+2 $')} type="checkbox" id="checkbox3" className={styles.customCheckbox} />
         <label htmlFor="checkbox3">+2 $  Custom Profile</label>
       </div>
     </div>

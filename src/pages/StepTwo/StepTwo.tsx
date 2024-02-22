@@ -7,7 +7,7 @@ import OutputStepsPanel from "../../components/OutputStepsPanel/OutputStepsPanel
 import styles from "./StepTwo.module.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import StepFour from "../StepFour/StepFour";
+
 
 const StepTwo = () => {
   const [activeDiv, setActiveDiv] = useState(null);
