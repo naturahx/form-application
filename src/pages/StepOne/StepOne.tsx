@@ -11,7 +11,7 @@ const StepOne = () => {
   return (
     <FormWrapper>
       <BarSteps>
-        <Link to="/stepone">
+        <Link to="/">
           <ActiveStep>1</ActiveStep>
         </Link>
         <span className={styles.steptitle}>STEP 1</span>

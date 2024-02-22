@@ -14,12 +14,9 @@ import ThankYou from './pages/ThankYou/ThankYou.tsx';
 
 
 const router = createBrowserRouter([
+
   {
     path: "/",
-    element: <App />,
-  },
-  {
-    path: "/stepone",
     element: <StepOne />,
   },
   {

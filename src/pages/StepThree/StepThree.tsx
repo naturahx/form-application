@@ -23,7 +23,7 @@ const StepThree = () => {
   return (
     <FormWrapper>
       <BarSteps>
-        <Link to="/stepone">
+        <Link to="/">
           <InactiveStep>1</InactiveStep>
         </Link>
         <span className={styles.steptitle}>STEP 1</span>
