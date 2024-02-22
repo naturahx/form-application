@@ -11,7 +11,7 @@ const ThankYou = () => {
   return (
     <FormWrapper>
       <BarSteps>
-        <Link to="/stepone">
+        <Link to="/">
           <InactiveStep>1</InactiveStep>
         </Link>
         <span className={styles.steptitle}>STEP 1</span>
@@ -32,7 +32,7 @@ const ThankYou = () => {
         <h1>Thank You</h1>
         <h3>Checked your Email !</h3>
         <div className={styles.block}>
-          <Link to="/stepone">
+          <Link to="/">
             <Button>Go to STEP 1</Button>
           </Link>
         </div>
