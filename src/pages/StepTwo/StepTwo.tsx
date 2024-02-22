@@ -18,10 +18,6 @@ const StepTwo = () => {
     setActiveDiv(index);
   };
 
-  const setSelected = (divValue: string) => {
-    setSelectedDiv(divValue);
-  }  
-
   const dataToPass = selectedDiv;
 
   localStorage.setItem('dataToPass', dataToPass);
